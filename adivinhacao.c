@@ -16,6 +16,13 @@ int main() {
         printf("Tentativa %d de %d\n", i, NUMERO_DE_TENTATIVAS);
         printf("Qual e o seu chute? " );
         scanf("%d", &chute);
+
+        if(chute < 0) {
+            printf("Voce nao pode chutar numeros negativos!\n");
+            continue;
+            i--;
+        }
+
         printf("Seu chute foi %d", chute);
 
         int acertou = (chute == numerosecreto);
